@@ -8,19 +8,18 @@ Author- Samir Akash
 
 #include <stdio.h>
 
-int add(int a,int b) {
-    int sum;
-    sum=a+b;
+float add(float a,float b) {
+    float sum=a+b;
     return sum;
 }
 
-int subtract(int a, int b){
-    int sub=a-b;
+float subtract(float a, float b){
+    float sub=a-b;
     return sub;
 }
 
-int product(int a,int b){
-    int pro=a*b;
+float product(float a,float b){
+    float pro=a*b;
     return pro;
 }
 
@@ -31,29 +30,29 @@ float division(float a,float b){
 
 int main() {
    printf("this is a calculator.\n Welcome!\n");
-   int a;
-   int b;
+   float a;
+   float b;
    int op;
    printf("enter the first number=");
-   scanf("%d",&a);
+   scanf("%f",&a);
    printf("Enter the second number=");
-   scanf("%d",&b);
+   scanf("%f",&b);
    printf("enter the operation you want to do(1=add,2=subtract,3=product,4=division)=");
    scanf("%d",&op);
    if (op==1){
-       printf("the sum is=%d",add(a,b));
+       printf("the sum is=%.3f",add(a,b));
    }
    else if (op==2){
-       printf("the subtacted value is=%d",subtract(a,b));
+       printf("the subtacted value is=%.3f",subtract(a,b));
    }
    else if (op==3){
-       printf("the product is=%d",product(a,b));
+       printf("the product is=%.3f",product(a,b));
    }
    else if (op==4){
-       printf("the dision value is=%f",division(a,b));
+       printf("the division value is=%.3f",division(a,b));
    }
    else{
-       printf("wrong input!");
+       printf("wrong input!Please select a valid operation!");
    }
    return 0;
 }
